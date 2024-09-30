@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+span{
+    color: #00ffea;
+    font-weight: bolder;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    background: #11141a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #00ffea;
+}
+
+/* Menu Icon for Mobile */
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Home Section */
+#home {
+    border-bottom-left-radius: 30px ;
+    border-bottom-right-radius: 200px ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.9)),url('bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #1f242d; */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    height: auto; /* Remove full height */
+    min-height:100vh; /* Ensures it doesn't take full screen height */
+}
+
+.home-content {
+    max-width: 80%;
+    margin: auto;
+}
+
+.home-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.home-content p {
+    font-size: 24px;
+    color: #ddd;
+}
+
+/* Services Section */
+#services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.9)),url('bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    border-top-left-radius: 200px ;
+    border-top-right-radius: 50px ;
+    border-bottom-right-radius: 50px ;
+    border-bottom-left-radius: 100px ;
+    height: 90vh;
+    padding: 40px 20px;
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+}
+
+.service-box {
+
+    height: 20%;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 40px 20px;
+    background-color:  rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 50px ;
+    border-bottom-right-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+}
+#portfolio h2{
+    text-align: center;
+}
+
+#portfolio a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+
+/* Contact Section */
+/* Contact Section */
+#contact {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-box a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.contact-box a:hover {
+    color: #00ffea;
+}
+
+.contact-box i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Media query for Contact Section */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    #contact h2{
+        font-size: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* Sections */
+section {
+    padding: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Navbar for Mobile */
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #11141a;
+        height: 100vh;
+        width: 200px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        padding: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav.show {
+        transform: translateX(0);
+    }
+
+    nav a {
+        margin: 20px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Home Section for Mobile */
+    #home {
+        min-height: 80vh; /* Reducing the height further for mobile */
+        border-bottom-left-radius: 30px ;
+        border-bottom-right-radius: 200px ;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.9)),url('bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .home-content {
+        max-width: 80%; /* Keeping 80% width for mobile */
+    }
+
+    .home-content h1 {
+        font-size: 24px; /* Smaller font size for mobile */
+        font-weight: 600;
+        color: #f8f6f8;
+    }
+
+    .home-content p {
+        font-size: 14px; /* Smaller font size for mobile */
+        color: #f8f6f8;
+
+    }
+
+    #services{
+    border-top-left-radius: 50px ;
+    border-top-right-radius: 50px ;
+    border-bottom-right-radius: 50px ;
+    border-bottom-left-radius: 100px ;
+    height: 75vh;
+    padding: 40px 20px;
+    background-color: #010711;
+    color: #fff;
+    text-align: center;
+    }
+    #services h2{
+        font-size: 20px;
+    }
+    .service-box{
+        height: 25%;
+        font-size: 18px;
+    }
+
+    /* Portfolio Thumbnails for Mobile */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    #portfolio h2{
+        font-size: 20px;
+    }
+
+    .thumbnail img {
+        height: 100%;
+    }
+}
